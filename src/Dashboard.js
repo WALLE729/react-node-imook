@@ -28,7 +28,7 @@ class Dashboard extends React.Component {
                                 <Link to={`${match.url}`}>yiying</Link>
                             </li>
                             <li>
-                                <Link to={`${match.url}/erying`}>erying</Link>
+                                <Link to={`${match.url}/erying`}>erying 123</Link>
                             </li>
                             <li>
                                 <Link to={`${match.url}/qibinglian`}>qibinglian</Link>
