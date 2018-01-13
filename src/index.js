@@ -10,7 +10,7 @@ import Auth from './Auth'
 import Dashboard from './Dashboard'
 import './config'
 
-const reduxDevtools = window.devToolsExtension ? window.devToolsExtension() : () => {}
+const reduxDevtools = window.devToolsExtension ? window.devToolsExtension() : f=>f
 const store = createStore(reducers, compose(applyMiddleware(thunk), reduxDevtools))
 
 ReactDom.render(
