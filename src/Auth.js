@@ -21,6 +21,7 @@ class Auth extends React.Component {
     render() {
         return (
             <div>
+                <h1> Success !!! </h1>
                 <h2>My name is {this.props.user}  age: {this.props.age}</h2>
                 { this.props.isAuth ? <Redirect to='/dashboard'></Redirect> : null}
                 <h2> You need to login </h2>
