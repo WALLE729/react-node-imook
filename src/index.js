@@ -5,9 +5,11 @@ import { Provider } from 'react-redux'
 import { BrowserRouter, Route, Redirect, Switch} from 'react-router-dom'
 import { createStore, applyMiddleware, compose } from 'redux'
 
+import Login from './container/login/login'
+import Register from './container/register/register'
+import Boss from './container/boss/boss'
+import AuthRoute from './component/authroute/authroute'
 import reducers from './reducers'
-import Auth from './Auth'
-import Dashboard from './Dashboard'
 import './config'
 
 const reduxDevtools = window.devToolsExtension ? window.devToolsExtension() : f=>f
@@ -17,11 +19,12 @@ ReactDom.render(
     (
         <Provider store={store}>
             <BrowserRouter>
-                <Switch>
-                    <Route path='/login' exact component={Auth}></Route>
-                    <Route path='/dashboard' component={Dashboard}></Route>
-                    <Redirect to='/dashboard'></Redirect>
-                </Switch>   
+                <div>
+                    <AuthRoute></AuthRoute>
+                    <Route path = '/boss' component={Boss}></Route>
+                    <Route path = '/login' component={Login}></Route>
+                    <Route path = '/register' component={Register}></Route>
+                </div>
             </BrowserRouter>
         </Provider>
     ),
